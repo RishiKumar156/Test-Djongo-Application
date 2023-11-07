@@ -29,8 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
+    'api.apps.ApiConfig',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,14 +74,27 @@ WSGI_APPLICATION = 'hormony.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'hormony',
+#         'host' : 'mongodb+srv://rishik:sagpenty@cluster0.opou9wy.mongodb.net/?retryWrites=true&w=majority',
+#         'USER' : 'rishik',
+#         'PASSWORD' : 'sagpenty'
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
+"default": {
+    "ENGINE": "djongo",
+    "CLIENT": {
+        "host": "mongodb+srv://rishik:sagpenty@cluster0.opou9wy.mongodb.net/?retryWrites=true&w=majority",
+        "username": "rishik",
+        "password": "sagpenty",
+        "name": "hormony",
+        "authMechanism": "SCRAM-SHA-1",
+    },
+}}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
