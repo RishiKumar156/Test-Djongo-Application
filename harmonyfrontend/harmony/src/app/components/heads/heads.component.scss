@@ -4,8 +4,10 @@
   background-color: #333333;
   border-radius: 1%;
   .head {
-    background-color: #efefef;
+    background: url("././../../../assets/piano.avif");
     width: 100%;
     height: 15rem;
+    background-size: cover;
+    background-position: center;
   }
 }
