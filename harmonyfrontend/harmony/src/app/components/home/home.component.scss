@@ -1,11 +1,12 @@
 .container {
   width: 100%;
   padding-top: 5rem;
-  background-color: #1a1a1a;
-  height: 100vh;
+  // background-color: #1a1a1a;
+  // height: 100vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
   .head {
     width: 65%;
     height: 80vh;
