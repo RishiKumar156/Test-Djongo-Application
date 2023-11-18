@@ -39,3 +39,14 @@
     </div>
   </div>
 </div>
+
+<!-- app.component.html -->
+<div>
+  <h2>Linked List:</h2>
+  <ul>
+    <li *ngFor="let node of linkedList.getAllNodes()">
+      {{ node.data.id }} - {{ node.data.name }}
+    </li>
+  </ul>
+  <button (click)="getAllNodes()">Get All Nodes</button>
+</div>
